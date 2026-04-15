@@ -28,6 +28,44 @@
 
 package lesson01.challenge04;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Patisserie {
+	public static void main(String[] args) throws IOException {
+
+		System.out.println("たいへんお待たせしました。");
+		System.out.println("【ポエール・ネルメ】");
+		System.out.println("ただいまより開店です！！");
+
+		int citronStock = 30;
+		int chocolatStock = 30;
+		int pistacheStock = 30;
+
+		System.out.println("本日のおすすめ商品です。");
+
+		System.out.println("シトロン      \\250 ・・・ 残り" + citronStock + "個");
+		System.out.println("ショコラ      \\280 ・・・ 残り" + chocolatStock + "個");
+		System.out.println("ピスターシュ  \\320 ・・・ 残り" + pistacheStock + "個");
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("それぞれ何個ずつ買いますか？");
+
+		System.out.print("シトロン>");
+		String a = reader.readLine();
+		System.out.print("ショコラ>");
+		String b = reader.readLine();
+		System.out.print("ピスターシュ>");
+		String c = reader.readLine();
+
+		System.out.println("\nシトロン" + a + "個");
+		System.out.println("ショコラ" + b + "個");
+		System.out.println("ピスターシュ" + c + "個");
+
+		System.out.println("をお買いあげですね。");
+		System.out.println("承りました。");
+	}
 
 }
