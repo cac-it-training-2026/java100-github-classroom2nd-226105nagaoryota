@@ -94,9 +94,10 @@ public class Explorer {
 			alligator = (int) (Math.random() * 10 % 3) + 1;
 			if (alligator == 1) {
 				if (hand == 1 || hand == 3) {
+					i++;
 					System.out.println("隊長：");
 					System.out.println("相手はグーワニでした。");
-					System.out.println(i + 1 + "匹目通り抜け成功！");
+					System.out.println(i + "匹目通り抜け成功！");
 				} else {
 					System.out.println("隊長：");
 					System.out.println("相手はグーワニでした。");
@@ -104,7 +105,30 @@ public class Explorer {
 					break;
 				}
 			} else if (alligator == 2) {
+				if (hand == 1 || hand == 2) {
+					i++;
+					System.out.println("隊長：");
+					System.out.println("相手はチョキワニでした。");
+					System.out.println(i + "匹目通り抜け成功！");
+				} else {
+					System.out.println("隊長：");
+					System.out.println("相手はチョキワニでした。");
+					System.out.println("通り抜けに失敗しました...");
+					break;
+				}
 
+			} else {
+				if (hand == 2 || hand == 3) {
+					i++;
+					System.out.println("隊長：");
+					System.out.println("相手はパーワニでした。");
+					System.out.println(i + "匹目通り抜け成功！");
+				} else {
+					System.out.println("隊長：");
+					System.out.println("相手はパーワニでした。");
+					System.out.println("通り抜けに失敗しました...");
+					break;
+				}
 			}
 		}
 
