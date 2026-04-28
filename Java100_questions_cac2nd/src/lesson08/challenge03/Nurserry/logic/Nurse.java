@@ -1,4 +1,4 @@
-package lesson09.challenge04.Nurserry.logic;
+package lesson08.challenge03.Nurserry.logic;
 
 public class Nurse {
 	private String name;
@@ -14,12 +14,4 @@ public class Nurse {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	//ここに適切な処理を記述
-	public void takeTemperature(NurserySchoolChild child) {
-		if (child.getTemperature() >= 38) {
-
-		}
-	}
-
 }

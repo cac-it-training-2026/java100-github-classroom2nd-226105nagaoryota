@@ -29,11 +29,10 @@ class Samurai {
 		System.out.println("戦うよ～。");
 	}
 
+	//ここに問題4で作成したwork()メソッドを記述
 	void work() {
 		System.out.println("何かして働くよ～。");
 	}
-
-	//ここに問題4で作成したwork()メソッドを記述
 
 }
 
