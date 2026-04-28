@@ -95,23 +95,26 @@ public class WarehouseManager {
 
 		System.out.print("データ型を選んでください（1...文字、2...文字列、3...数値）＞");
 
-
 		//ここに入力処理を記述する。
-
+		String str = br.readLine();
+		int count1 = Integer.parseInt(str);
 
 		System.out.print("\n要素数を選んでください（1...1個、2...2個、3...3個）＞");
 
-
 		//ここに入力処理を記述する。
-
+		str = br.readLine();
+		int count2 = Integer.parseInt(str);
 
 		boolean errFlag = false;
 
-
 		//ここに入力値の範囲チェック処理を記述する。
+		if (0 <= count1 && count1 <= 3) {
+			if (0 <= count2 && count2 <= 3) {
+				errFlag = true;
+			}
+		}
 
-
-		if (!errFlag) {
+		if (errFlag) {
 			System.out.println("\nZ先輩：");
 			System.out.println("中に入れる値はおまかせという事でよろしいですね。");
 			System.out.println("ご注文を承りました。\n");
@@ -126,10 +129,39 @@ public class WarehouseManager {
 			String[] strArray = null;
 			int[] intArray = null;
 
-
 			//ここに入力値による分岐および配列要素数の確定、
 			//値の代入処理を記述する。
+			switch (count1) {
+			case 1: {
+				charArray = new char[count2];
+				for (int i = 0; i < count2; i++) {
+					charArray[i] = 'i';
 
+				}
+				break;
+
+			}
+			case 2: {
+				strArray = new String[count2];
+				for (int i = 0; i < count2; i++) {
+					strArray[i] = "i";
+
+				}
+				break;
+
+			}
+			case 3: {
+				intArray = new int[count2];
+				for (int i = 0; i < count2; i++) {
+					intArray[i] = i;
+				}
+				break;
+
+			}
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + count1);
+
+			}
 
 			System.out.println("Yさん：");
 			System.out.println("...出来ました。\n");
@@ -139,9 +171,27 @@ public class WarehouseManager {
 
 			System.out.println("Yさん：");
 
-
 			//ここに入力値による分岐および配列要素の表示処理を記述する。
+			switch (count1) {
+			case 1: {
+				System.out.println(charArray[count2 - 1]);
+				break;
 
+			}
+			case 2: {
+				System.out.println(strArray[count2 - 1]);
+				break;
+
+			}
+			case 3: {
+				System.out.println(intArray[count2 - 1]);
+				break;
+
+			}
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + count1);
+
+			}
 
 			System.out.println("です。\n");
 
